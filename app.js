@@ -57,6 +57,10 @@ function modifyTask(event){
     parent.children[1].classList.toggle("completed");
   }
   if(item.classList[0] === "modifyBtn"){
+      if(parent.children[1].classList[1] === "completed"){
+        alert("Please mark Task as not completed")
+        return;
+      }
       const newValue = prompt("Provide modified Task details");
       if(newValue === ""){
         alert("Please Enter the Task Details❤️")
