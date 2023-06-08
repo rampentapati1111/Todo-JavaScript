@@ -1,5 +1,5 @@
 # Todo List -Vanilla JavaScript
-A "todo list" web app built using HTML, CSS and Vanilla JS. A user can make a list of tasks, can mark it completed and delete the tasks.
+A "todo list" web app built using HTML, CSS and Vanilla JS. A user can make a list of tasks, can mark it completed and delete the tasks. User can also modify the task details.
 
 ### Snapshot of the Output
 ![Snapshot of the Result](/Snapshot.png)
