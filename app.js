@@ -17,6 +17,8 @@ function addTask(event){
   }
   //create Tags:
   const todoTaskDiv = document.createElement("div");
+  const modifyButton = document.createElement("button");
+  modifyButton.innerHTML = "<i class='fas fa-pen-to-square'></i>"
   const todoTaskListLi = document.createElement("li");
   const completedButton = document.createElement("button");
   completedButton.innerHTML = "<i class='fas fa-check'></i>"
@@ -25,6 +27,7 @@ function addTask(event){
 
   //add Classes
   todoTaskDiv.classList.add("todoTask")
+  modifyButton.classList.add("modifyBtn")
   todoTaskListLi.classList.add("todoTaskList")
   completedButton.classList.add("completedBtn")
   deleteButton.classList.add("deleteBtn")
@@ -33,6 +36,7 @@ function addTask(event){
     todoTaskListLi.innerText = todoInput.value;
 
   //add to List
+    todoTaskDiv.appendChild(modifyButton)
     todoTaskDiv.appendChild(todoTaskListLi);
     todoTaskDiv.appendChild(completedButton);
     todoTaskDiv.appendChild(deleteButton);
@@ -50,7 +54,15 @@ function modifyTask(event){
     parent.remove();
   }
   if(item.classList[0] === "completedBtn"){
-    parent.firstChild.classList.toggle("completed");
+    parent.children[1].classList.toggle("completed");
+  }
+  if(item.classList[0] === "modifyBtn"){
+      const newValue = prompt("Provide modified Task details");
+      if(newValue === ""){
+        alert("Please Enter the Task Details❤️")
+        return;
+      }
+      parent.children[1].innerText = newValue;
   }
 }
 

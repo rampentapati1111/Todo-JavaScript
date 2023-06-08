@@ -91,6 +91,16 @@ html, body{
   font-weight: bold;
 }
 
+.modifyBtn{
+  margin: 0 0.5em;
+  padding: 0.5em;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: black;
+  background-color: rgb(210, 174, 174);
+}
+
 .completedBtn{
   margin: 0 0.5em;
   padding: 0.5em;
@@ -113,6 +123,11 @@ html, body{
   color: #fff;
 }
 
+.modifyBtn:hover{
+  color: rgb(210, 174, 174);
+  background-color: black;
+}
+
 .completedBtn:hover{
   color: green;
   background-color: #fff;
@@ -128,6 +143,7 @@ html, body{
   text-decoration: line-through;
   opacity: 0.5;
 }
+
 .fas{
   pointer-events: none;
 }
